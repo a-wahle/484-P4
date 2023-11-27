@@ -28,7 +28,7 @@ public:
 	std::pair<uint, uint> read_data(const char* filename);
 
 private:
-	std::vector<std::shared_ptr<Page>> pages;
+	std::vector<std::shared_ptr<Page> > pages;
 };
 
 #endif

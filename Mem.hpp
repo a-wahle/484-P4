@@ -37,7 +37,7 @@ public:
 	size_t flushToDiskTimes() const;
 
 private:
-	std::vector<std::shared_ptr<Page>> pages;
+	std::vector<std::shared_ptr<Page> > pages;
 
 	// The following member variables are intended for debugging / grading
 	size_t num_load_from_disk = 0;

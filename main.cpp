@@ -32,6 +32,16 @@ int main(int argc, char** argv) {
 	/* Grace Hash Join Partition Phase */
 	vector<Bucket> res = partition(&disk, &mem, left_rel, right_rel);
 
+	// cout << "here\n";
+	// for(auto r: res){
+	// 	for(auto i : r.get_left_rel()){
+	// 		cout << i << "\n";
+	// 	}
+	// 	for(auto i : r.get_right_rel()){
+	// 		cout << i << "\n";
+	// 	}
+	// }
+
 	/* Grace Hash Join Probe Phase */
 	vector<uint> join_res = probe(&disk, &mem, res);
 
