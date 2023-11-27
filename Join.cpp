@@ -124,7 +124,11 @@ vector<uint> probe(Disk* disk, Mem* mem, vector<Bucket>& partitions) {
 					
 				}
 			}
-		}
+			for (size_t page_id = 1; page_id <= MEM_SIZE_IN_PAGE - 2; ++page_id) {
+				Page* temp = mem->mem_page(page_id);
+				temp->reset();
+			}
+		} 
 		disk_pages.push_back(mem->flushToDisk(disk, MEM_SIZE_IN_PAGE-1));
 	//}
 
